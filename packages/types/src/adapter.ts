@@ -19,7 +19,13 @@ export const adapterSchema = z.object({
     .returns(z.promise(collectionSchema.array())),
   createUser: z
     .function()
-    .args(z.string(), z.string())
+    .args(
+      userSchema.pick({
+        username: true,
+        password: true,
+        role: true,
+      }),
+    )
     .returns(z.promise(z.boolean())),
   getUserByUsername: z
     .function()

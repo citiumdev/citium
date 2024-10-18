@@ -7,6 +7,7 @@ enum CLICommand {
   version = "version",
   db = "db",
   dev = "dev",
+  users = "users",
 }
 
 export const cli = async (args: string[]) => {
@@ -54,6 +55,12 @@ const runCommand = async (cmd: CLICommand, flags: Arguments) => {
   if (cmd === "dev") {
     const { dev } = await import("./dev/index.js");
     dev(flags);
+    return;
+  }
+
+  if (cmd === "users") {
+    const { users } = await import("./users/index.js");
+    users(flags);
     return;
   }
 

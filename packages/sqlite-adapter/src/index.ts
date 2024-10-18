@@ -203,7 +203,11 @@ const sqliteAdapter = (config: Config): Adapter => {
     return collections;
   };
 
-  const createUser: Adapter["createUser"] = async (username, password) => {
+  const createUser: Adapter["createUser"] = async ({
+    username,
+    password,
+    role,
+  }) => {
     const findUserResult = await db.execute({
       sql: sql`
         SELECT
@@ -225,11 +229,11 @@ const sqliteAdapter = (config: Config): Adapter => {
     const createdUserResult = await transaction.execute({
       sql: sql`
         INSERT INTO
-          "user" ("username", "password")
+          "user" ("username", "password", "role")
         VALUES
-          (:username, :password);
+          (:username, :password, :role);
       `,
-      args: { username, password },
+      args: { username, password, role },
     });
 
     const createdUserId = createdUserResult.lastInsertRowid;
