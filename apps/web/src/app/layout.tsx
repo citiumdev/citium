@@ -22,6 +22,7 @@ export function generateMetadata(): Metadata {
   return {
     title,
     description,
+    metadataBase: new URL(`https://${process.env.CF_PAGES_URL}`),
     openGraph: {
       title,
       description,
