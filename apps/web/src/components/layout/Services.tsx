@@ -13,54 +13,52 @@ export default function Services() {
       title: "UI/UX ",
       image: Service1,
       description:
-        "Creamos diseños únicos y atractivos que reflejan la identidad de tu marca. Nuestro enfoque en la usabilidad y la experiencia del usuario garantiza que tu sitio web no solo sea visualmente impresionante, sino también fácil de navegar.",
+        "Diseños únicos y atractivos que reflejan la identidad de tu marca. Enfoque en la usabilidad y la experiencia del usuario.",
     },
     {
-      title: "Diseño y Desarrollo Web Personalizado",
+      title: "Diseño y Desarrollo Personalizado",
       image: Service2,
       description:
-        "Desarrollamos soluciones web robustas y escalables. Ya sea que necesites un sitio web corporativo, una tienda en línea o una aplicación web personalizada, nuestro equipo tiene la experiencia para llevar tu proyecto al siguiente nivel.",
+        "Soluciones web robustas y escalables. Nuestro equipo tiene la experiencia para llevar tu proyecto al siguiente nivel.",
     },
     {
       title: "Mantenimiento y Soporte Técnico",
       image: Service3,
       description:
-        "Nos encargamos de mantener tu sitio web en óptimas condiciones, mejorando su velocidad y eficiencia para una mejor experiencia de usuario. Implementamos actualizaciones de seguridad, corregimos errores técnicos, y supervisamos el rendimiento y la seguridad.",
+        "Actualizaciones de seguridad, corrección de  errores técnicos, y enfoque en el rendimiento y la seguridad.",
     },
     {
       title: "SEO",
       image: Service4,
       description:
-        "Mejoramos la visibilidad de tu sitio web en los motores de búsqueda mediante estrategias SEO avanzadas. Desde la investigación de palabras clave hasta la optimización del contenido, trabajamos para atraer más tráfico orgánico y aumentar tu presencia en línea.",
+        "Visibilidad de tu sitio web en los motores de búsqueda mediante estrategias SEO para atraer más tráfico orgánico y aumentar tu presencia en línea.",
     },
     {
       title: "Hosting",
       image: Service5,
       description:
-        "Ofrecemos hosting completo con el dominio que necesites, asegurando que tu sitio web esté siempre en línea y funcionando correctamente. Este servicio opcional, te proporciona una gestión sin preocupaciones.",
+        "Hosting completo con el dominio que necesites, tu sitio web estará siempre en línea y funcionando correctamente.",
     },
     {
-      title: "Consultaria y estrategia digital",
+      title: "Consultoria y estrategia digital",
       image: Service6,
       description:
-        "Detectamos el problema o la necesidad de tu marca y realizamos un análisis exhaustivo de las características de tu negocio. Conceptualizamos, diseñamos y producimos una propuesta a la altura de tus necesidades. Te asesoramos en estrategias digitales para definir y alcanzar tus objetivos online.",
+        "Detectamos el problema o la necesidad de tu marca y realizamos un análisis exhaustivo de las características de tu negocio.",
     },
   ];
 
   return (
-    <section id="services" className="bg-zinc-100 py-32">
+    <section id="services" className="pb-56 pt-8">
       <div className="container mx-auto flex min-h-screen max-w-6xl flex-col items-center px-4">
-        <div className="mt-20 flex max-w-xl flex-col items-center justify-center gap-4 text-center">
-          <h1 className="font-serif text-2xl font-bold sm:text-3xl md:text-4xl">
-            Servicios
+        <div className="mt-20 flex max-w-xl flex-col items-center justify-center text-center">
+          <h1 className="mb-2 font-serif text-2xl font-medium sm:text-3xl md:text-4xl">
+            Nuestros Servicios
           </h1>
-          <p className="leading-tight text-zinc-500 md:text-xl">
-            En Citium, creemos que la verdadera fortaleza radica en la
-            resiliencia y la adaptabilidad. Brindandote soluciones
-            personalizadas que se adaptan a tus necesidades y objetivos.
+          <p className="leading-tight text-zinc-600 md:text-lg">
+            Soluciones personalizadas que se adaptan a tus necesidades
           </p>
         </div>
-        <div className="grid w-full grid-cols-1 gap-4 py-20 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <Card
               key={index}
@@ -79,7 +77,8 @@ export default function Services() {
                 <h2 className="mb-2 font-serif text-lg font-bold">
                   {service.title}
                 </h2>
-                <p className="text-zinc-500">{service.description}</p>
+
+                <p className="text-zinc-600">{service.description}</p>
               </div>
             </Card>
           ))}

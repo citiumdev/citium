@@ -80,7 +80,7 @@ export default function ContactForm() {
   };
 
   return (
-    <Card className="flex w-full flex-col items-center p-8">
+    <Card className="flex w-full flex-col items-center px-4 py-8 lg:px-8">
       <h2 className="mb-8 text-2xl font-bold lg:text-3xl">
         Describe tu proyecto
       </h2>

@@ -1,32 +1,41 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
-import HeroDesktopMockup from "./HeroDesktopMockup";
-import HeroPhoneMockup from "./HeroPhoneMockup";
-import Navbar from "./Navbar";
+import HeroImage from "@/assets/hero.png";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <header id="home" className="relative flex min-h-screen overflow-hidden">
-      <Navbar />
-      <div className="mt-20 flex h-full w-full items-center py-20">
-        <div className="container mx-auto flex max-w-6xl px-4">
-          <div className="mx-auto flex max-w-lg flex-col gap-6 lg:w-2/5">
-            <h1 className="text-center font-serif text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-left lg:text-6xl">
-              Agencia especializada en desarrollo y diseño web
+    <header id="home" className="flex min-h-screen overflow-hidden">
+      <div className="pattern flex h-full w-full items-center pb-56 pt-40 md:pt-52">
+        <div className="flexflex-col container mx-auto px-4">
+          <div className="mx-auto flex w-full flex-col items-center">
+            <h1 className="mb-4 text-center font-serif text-4xl font-medium lg:text-5xl">
+              Desarrollo web especializado
             </h1>
-            <p className="text-center text-lg leading-tight text-zinc-500 md:text-xl lg:text-left lg:text-2xl">
+            <p className="mb-8 max-w-lg text-center leading-tight text-zinc-600 md:text-xl lg:text-lg">
               Transformamos tus ideas en realidades digitales. Tu imaginas,
               nosotros lo creamos.
             </p>
-            <div className="flex w-full items-center justify-center gap-4 lg:justify-start">
-              <Button asChild className="font-bold">
+            <div className="flex w-full flex-col items-center justify-center gap-2 sm:flex-row">
+              <Button asChild size="sm" className="w-full sm:w-auto">
                 <Link href="#contact">Empieza tu proyecto</Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="sm"
+                className="w-full sm:w-auto"
+              >
+                <Link href="#projects">Trabajos anteriores</Link>
               </Button>
             </div>
           </div>
-          <div className="relative hidden w-3/5 items-center justify-center lg:flex">
-            <HeroPhoneMockup />
-            <HeroDesktopMockup />
+          <div className="mx-auto mt-16 flex max-w-6xl items-center justify-center md:mt-24">
+            <div className="aspect-video w-full rounded-[8px] bg-zinc-300 p-[4px] shadow-md md:rounded-[17px]">
+              <div className="relative h-full w-full overflow-hidden rounded-[4px] md:rounded-[12px]">
+                <Image src={HeroImage} alt="website mockup" fill />
+              </div>
+            </div>
           </div>
         </div>
       </div>

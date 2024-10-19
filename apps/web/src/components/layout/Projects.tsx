@@ -24,19 +24,17 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-32">
+    <section id="projects" className="pb-56 pt-8">
       <div className="container mx-auto flex max-w-6xl flex-col items-center px-4">
         <div className="mt-20 flex max-w-xl flex-col items-center justify-center gap-4 text-center">
-          <h1 className="font-serif text-2xl font-bold sm:text-3xl md:text-4xl">
+          <h1 className="font-serif text-2xl font-medium sm:text-3xl md:text-4xl">
             Nuestros Proyectos
           </h1>
           <p className="leading-tight text-zinc-500 md:text-xl">
-            Cada uno de nuestros proyectos refleja nuestro compromiso con la
-            calidad, la innovación y la satisfacción del cliente. Aquí te
-            presentamos algunos de nuestros trabajos más destacados:
+            Algunos de nuestros trabajos más destacados
           </p>
         </div>
-        <div className="flex w-full flex-col gap-4 py-20">
+        <div className="mt-8 flex w-full flex-col gap-4">
           {projects.map((project, index) => (
             <Link
               key={index}
