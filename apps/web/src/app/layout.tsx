@@ -24,10 +24,9 @@ export function generateMetadata(): Metadata {
   return {
     title,
     description,
-    metadataBase:
-      process.env.NEXT_ENV === "production"
-        ? new URL(`${process.env.CF_PAGES_URL}`)
-        : undefined,
+    metadataBase: process.env.CF_PAGES_URL
+      ? new URL(`${process.env.CF_PAGES_URL}`)
+      : undefined,
     openGraph: {
       title,
       description,
