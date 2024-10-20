@@ -1,13 +1,11 @@
-import Image, { StaticImageData } from "next/image";
 import { Card } from "../ui/card";
-
-import CudiImage from "@/assets/projects/cudi.png";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
+import UploadcareImage from "../UploadcareImage";
 
 type Project = {
   title: string;
-  image: StaticImageData;
+  image: string;
   description: string;
   url: string;
 };
@@ -16,7 +14,7 @@ export default function Projects() {
   const projects: Project[] = [
     {
       title: "CUDI",
-      image: CudiImage,
+      image: "1853ad79-fb7d-4095-858c-f82109449ed7",
       url: "https://www.cudicoders.dev",
       description:
         "CUDI es una plataforma innovadora que conecta a programadores universitarios apasionados por la tecnología y la innovación. A través de eventos, talleres y hackathons, ofrece oportunidades únicas para el desarrollo profesional y personal.",
@@ -55,14 +53,10 @@ export default function Projects() {
                   </h2>
                   <p className="text-zinc-500">{project.description}</p>
                 </div>
-                <div className="w-full p-4 md:w-1/2">
-                  <Image
-                    src={project.image}
-                    width={600}
-                    height={316}
-                    alt="atenas"
-                    className="w-full rounded-xl object-cover"
-                  />
+                <div className="aspect-video w-full p-4 md:w-1/2">
+                  <div className="h-full w-full overflow-hidden rounded-xl">
+                    <UploadcareImage uuid={project.image} alt={project.title} />
+                  </div>
                 </div>
               </Card>
             </Link>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
-import HeroImage from "@/assets/hero.png";
-import Image from "next/image";
+import UploadcareImage from "../UploadcareImage";
 
 export default function Hero() {
   return (
@@ -33,7 +32,11 @@ export default function Hero() {
           <div className="mx-auto mt-16 flex max-w-6xl items-center justify-center md:mt-24">
             <div className="aspect-video w-full rounded-[8px] bg-zinc-300 p-[4px] shadow-md md:rounded-[17px]">
               <div className="relative h-full w-full overflow-hidden rounded-[4px] md:rounded-[12px]">
-                <Image src={HeroImage} alt="website mockup" fill />
+                {/* <Image src={HeroImage} alt="website mockup" fill /> */}
+                <UploadcareImage
+                  uuid="ae834506-e052-4fc0-9e0e-2818e1a09dd9"
+                  alt="website mockup"
+                />
               </div>
             </div>
           </div>
