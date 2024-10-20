@@ -55,7 +55,11 @@ export default function Projects() {
                 </div>
                 <div className="aspect-video w-full p-4 md:w-1/2">
                   <div className="h-full w-full overflow-hidden rounded-xl">
-                    <UploadcareImage uuid={project.image} alt={project.title} />
+                    <UploadcareImage
+                      uuid={project.image}
+                      alt={project.title}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
                   </div>
                 </div>
               </Card>

@@ -59,7 +59,11 @@ export default function Services() {
               className="overflow-hidden rounded-xl border border-zinc-300 bg-white"
             >
               <div className="relative aspect-video w-full">
-                <UploadcareImage uuid={service.image} alt={service.title} />
+                <UploadcareImage
+                  uuid={service.image}
+                  alt={service.title}
+                  sizes="(max-width: 640px) 100vw, (max-width:  1024px) 50vw, 33vw"
+                />
               </div>
 
               <div className="p-4">

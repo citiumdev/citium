@@ -6,9 +6,10 @@ import Image, { ImageLoaderProps } from "next/image";
 type Props = {
   uuid: string;
   alt: string;
+  sizes?: string;
 };
 
-export default function UploadcareImage({ uuid, alt }: Props) {
+export default function UploadcareImage({ uuid, alt, sizes }: Props) {
   const [isLoading, setIsLoading] = useState(true);
 
   const loader = (
@@ -31,8 +32,10 @@ export default function UploadcareImage({ uuid, alt }: Props) {
         fill
         className="h-full w-full object-cover"
         loader={(p) => loader(p, true)}
+        priority
       />
       <Image
+        sizes={sizes}
         src={uuid}
         alt={alt}
         fill
