@@ -19,10 +19,15 @@ export function generateMetadata(): Metadata {
   const description = "Agencia especializada en desarrollo y diseño web";
   const url = "https://www.citium.com";
 
+  console.log();
+
   return {
     title,
     description,
-    metadataBase: new URL(`${process.env.CF_PAGES_URL}`),
+    metadataBase:
+      process.env.NEXT_ENV === "production"
+        ? new URL(`${process.env.CF_PAGES_URL}`)
+        : undefined,
     openGraph: {
       title,
       description,
