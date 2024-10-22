@@ -2,11 +2,7 @@
 
 # Citium
 
-Citium es una agencia especializada en desarrollo y diseño web. En este monorepo se escuentran la pagina principal y paquetes utilizados para el desarrollo de un CMS.
-
-#### Aplicaciones
-
-- `apps/web`: Pagina web de [Citium](https://www.citium.dev/)
+Citium es una agencia especializada en desarrollo y diseño web. En este monorepo se escuentran paquetes utilizados para el desarrollo de un CMS.
 
 #### Demos
 
@@ -22,7 +18,7 @@ Citium es una agencia especializada en desarrollo y diseño web. En este monorep
 
 ### Compilar
 
-Para compilar todas las aplicaciones y paquetes, ejecute el siguiente comando:
+Para compilar todas las demos y paquetes, ejecute el siguiente comando:
 
 ```
 pnpm build
@@ -30,7 +26,7 @@ pnpm build
 
 ### Desarrollar
 
-Para desarrollar todas las aplicaciones y paquetes, ejecute el siguiente comando:
+Para desarrollar todas las demos y paquetes, ejecute el siguiente comando:
 
 ```
 pnpm dev
